@@ -1,0 +1,1 @@
+echo '1. Backup | 2. Restore'; read p; [ $p -eq 1 ] && (pkg list-installed | grep -v 'Listing...' | cut -d/ -f1 > pkginstalled.txt && echo 'Backup Berhasil!') || (cat pkginstalled.txt | xargs -n 1 pkg install -y && echo 'Restore Selesai!')
