@@ -14,7 +14,10 @@ sudo apt install -y \
   wget \
   git \
   ca-certificates \
-  zsh
+  zsh \
+  locale-gen id_ID.UTF-8 \
+  update-locale LANG=id_ID.UTF-8 \
+  timedatectl set-timezone Asia/Jakarta
 
 ################################
 # Ensure zshrc exists
